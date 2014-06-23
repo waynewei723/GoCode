@@ -23,9 +23,6 @@ namespace GoCodeWeb.Controllers
         public ActionResult Index()
         {
             GoUser user = new GoUser();
-            //user.Name = "123";
-            //user.Password = "123";
-            //userService.Add(user);
 
             return View(user);
         }

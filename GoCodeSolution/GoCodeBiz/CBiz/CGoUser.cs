@@ -16,6 +16,7 @@ namespace GoCodeBiz.CBiz
             using (GoDataContext context = new GoDataContext())
             {
                 user = context.GoUsers.Add(user);
+                context.SaveChanges();
             }
 
             return user;
@@ -27,6 +28,7 @@ namespace GoCodeBiz.CBiz
             using (GoDataContext context = new GoDataContext())
             {
                 model = context.GoUsers.FirstOrDefault(predicate);
+                context.SaveChanges();
             }
 
             return model;
